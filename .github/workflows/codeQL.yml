@@ -15,7 +15,7 @@ jobs:
       contents: read
     strategy:
       matrix:
-        languages: ['cpp', 'xml', 'actions', 'javascript']
+        language: ['cpp', 'xml', 'actions', 'javascript']
 
 
     steps:
@@ -25,7 +25,7 @@ jobs:
       - name: Initialize CodeQL
         uses: github/codeql-action/init@v1
         with:
-          languages: cpp, xml, actions, javascript
+          languages: ${{ matrix.language }}
 
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v1
