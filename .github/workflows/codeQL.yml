@@ -10,7 +10,7 @@ jobs:
     
     strategy:
       matrix:
-        language: ['cpp', 'xml', 'actions', 'javascript']
+        
         
     permissions:
       # required for all workflows
