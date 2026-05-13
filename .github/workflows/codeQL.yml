@@ -7,15 +7,16 @@ on:
 jobs:
   CodeQL-Build:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        languages: ['cpp', 'xml', 'actions', 'javascript']
-
+    
     permissions:
       # required for all workflows
       security-events: write
       actions: read
       contents: read
+    strategy:
+      matrix:
+        languages: ['cpp', 'xml', 'actions', 'javascript']
+
 
     steps:
       - name: Checkout repository
